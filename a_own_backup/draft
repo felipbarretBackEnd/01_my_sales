@@ -1,0 +1,1 @@
+"cross-env MIGRATION_NAME=$npm_config_name ts-node -r tsconfig-paths/register ./node_module/typeorm/cli.js migration:create src/shared/typeorm/migrations/$npm_config_name"
