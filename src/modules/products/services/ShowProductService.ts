@@ -7,7 +7,7 @@ interface IShowProduct {
 }
 
 export default class ShowProductService {
-  async execute({id}: IShowProduct): Promise<Product> {
+  async execute({ id }: IShowProduct): Promise<Product> {
     const product = await productsRepositories.findById(id);
 
     if(!product) {
