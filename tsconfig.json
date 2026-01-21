@@ -11,6 +11,11 @@
       "@shared/*": ["src/shared/*"]
     },
 
+    "typeRoots": [
+      "node_modules/@types",
+      "src/@types"
+    ],
+
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "commonjs",
