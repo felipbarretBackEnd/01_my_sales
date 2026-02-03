@@ -7,7 +7,7 @@ export const userTokensRepositories = AppDataSource.getRepository(UserToken).ext
     return userToken;
   },
 
-  async generated(user_id: number): Promise<UserToken | undefined> {
+  async generate(user_id: number): Promise<UserToken | undefined> {
     const userToken = this.create({
       user_id
     });
