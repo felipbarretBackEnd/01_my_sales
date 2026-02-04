@@ -1,4 +1,4 @@
-import AppError from "@shared/errors/AppErrors";
+import AppError from "@shared/errors/AppError";
 import { NextFunction, Response, Request } from "express";
 import { Secret, verify } from "jsonwebtoken";
 

@@ -1,4 +1,4 @@
-import AppError from "@shared/errors/AppErrors";
+import AppError from "@shared/errors/AppError";
 import { User } from "../database/entities/User";
 import { usersRepositories } from "../database/repositories/UsersRepositories";
 import { compare } from "bcrypt";

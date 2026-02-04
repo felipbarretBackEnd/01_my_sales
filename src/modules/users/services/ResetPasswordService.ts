@@ -1,4 +1,4 @@
-import AppError from "@shared/errors/AppErrors";
+import AppError from "@shared/errors/AppError";
 import { usersRepositories } from "../database/repositories/UsersRepositories";
 import { userTokensRepositories } from "../database/repositories/UserTokensRepositories";
 import { isAfter, addHours } from 'date-fns';
@@ -17,7 +17,7 @@ export default class ResetPasswordService {
       throw new AppError('User token not exists.', 404);
     };
 
-    const user = await usersRepositories.findById(userToken.id);
+    const user = await usersRepositories.findById(userToken.user_id);
 
     if(!user) {
       throw new AppError('User not exist.', 404);

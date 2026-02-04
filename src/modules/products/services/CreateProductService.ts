@@ -1,4 +1,4 @@
-import AppError from "@shared/errors/AppErrors";
+import AppError from "@shared/errors/AppError";
 import { productsRepositories } from "../database/repositories/ProductsRepositories"
 import { Product } from "../database/entities/Product";
 
