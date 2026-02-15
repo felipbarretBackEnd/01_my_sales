@@ -24,12 +24,15 @@ export default class UpdateProfileService {
       throw new AppError('User not found.', 404)
     }
 
-    const userUpdateEmail = await usersRepositories.findByEmail(email);
-    if(userUpdateEmail) {
-      throw new AppError('There is already one user with this email', 409);
+    if(email) {
+      const userUpdateEmail = await usersRepositories.findByEmail(email);
 
+      if(userUpdateEmail) {
+        throw new AppError('There is already one user with this email', 409);
+      }
       user.email = email;
     }
+
 
     if(password && !old_password) {
       throw new AppError('Old password is required.')
