@@ -14,7 +14,9 @@ export default class UpdateCustomerService {
     name,
     email,
   }: IUpdateCustomer): Promise<Customer> {
-    const customer = await customerRepository.findById(id)
+    const customer = await customerRepository.findById(id);
+
+    console.log("MY UPDATE: ", customer);
 
     if(!customer) {
       throw new AppError('Customer not found', 404);
@@ -30,6 +32,7 @@ export default class UpdateCustomerService {
     customer.email = email;
 
     await customerRepository.save(customer);
+
 
     return customer;
   }
