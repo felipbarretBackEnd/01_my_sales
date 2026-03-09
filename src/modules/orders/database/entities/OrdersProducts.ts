@@ -31,7 +31,7 @@ export class OrdersProducts{
   created_at: Date;
 
   @UpdateDateColumn()
-  uploated_at: Date;
+  updated_at: Date;
 
 
 
