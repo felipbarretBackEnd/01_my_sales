@@ -16,8 +16,6 @@ export default class UpdateCustomerService {
   }: IUpdateCustomer): Promise<Customer> {
     const customer = await customerRepository.findById(id);
 
-    console.log("MY UPDATE: ", customer);
-
     if(!customer) {
       throw new AppError('Customer not found', 404);
     }

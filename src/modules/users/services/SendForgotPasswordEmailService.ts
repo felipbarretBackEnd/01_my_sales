@@ -11,16 +11,11 @@ export default class SendForgotPasswordEmailService {
   async execute({ email }: IForgotPassword): Promise<void> {
     const user = await usersRepositories.findByEmail(email);
 
-    console.log("Meu user: ", user)
-
     if(!user) {
       throw new AppError('User not found.', 404);
     }
 
     const token = await userTokensRepositories.generate(user.id);
-
-    console.log("Meu TOKEN: ", token)
-
 
     sendEmail({
       to: email,
