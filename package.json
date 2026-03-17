@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_module src/shared/http/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_module src/shared/infra/http/server.ts",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
-    "typeorm": "typeorm-ts-node-commonjs -d src/shared/typeorm/data-source.ts",
-    "migration:create": "typeorm-ts-node-commonjs migration:create src/shared/typeorm/migrations/%npm_config_name%",
-    "migration:run": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d ./src/shared/typeorm/data-source.ts"
+    "typeorm": "typeorm-ts-node-commonjs -d src/shared/infra/typeorm/data-source.ts",
+    "migration:create": "typeorm-ts-node-commonjs migration:create src/shared/infra/typeorm/migrations/%npm_config_name%",
+    "migration:run": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d ./src/shared/infras/typeorm/data-source.ts"
   },
   "keywords": [],
   "author": "",

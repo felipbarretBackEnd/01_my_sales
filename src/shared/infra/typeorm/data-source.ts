@@ -12,6 +12,6 @@ export const AppDataSource = new DataSource({
   username: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASS || 'admin',
   database: process.env.DB_NAME || 'mysales',
-  entities: ['./src/modules/**/database/entities/*.{ts, js}'],
-  migrations: ['./src/shared/typeorm/migrations/*.{ts, js}']
+  entities: ['./src/modules/**/infra/database/entities/*.{ts, js}'],
+  migrations: ['./src/shared/infra/typeorm/migrations/*.{ts, js}']
 });
